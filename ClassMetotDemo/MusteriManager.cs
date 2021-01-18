@@ -8,17 +8,25 @@ namespace ClassMetotDemo
     {
         public void MusteriEkleme(Musteri musteri)
         {
-            Console.WriteLine(musteri+ " eklendi");
+            Console.WriteLine("Musteri Id : " + musteri.Id);
+            Console.WriteLine("Musteri Adi : " + musteri.Ad);
+            Console.WriteLine("Muster Soyadi : " + musteri.Soyad);
         }
 
-        public void MusteriListeleme(Musteri musteri)
+        public void MusteriListeleme(Musteri[] musteriler)
         {
-            Console.WriteLine(musteri + " listelendi");
+            foreach (var musteri in musteriler)
+            {
+                Console.WriteLine("Musteri Id : " + musteri.Id);
+                Console.WriteLine("Musteri Adi : " + musteri.Ad);
+                Console.WriteLine("Muster Soyadi : " + musteri.Soyad);
+            }
+           
 
         }
         public void MusteriSilme(Musteri musteri)
         {
-            Console.WriteLine(musteri + " silindi");
+            Console.WriteLine(musteri.Ad + " silindi");
 
         }
     }
